@@ -1,106 +1,83 @@
-# AWS Auto Scaling Demo 🚀
+<h1>🚀 AWS Auto Scaling Demo</h1>
 
-This project demonstrates how to deploy a simple web application on AWS using **Auto Scaling**, **Launch Templates**, and an **Application Load Balancer (ALB)**.
+<p>
+This project demonstrates how to deploy a simple web application on AWS using
+<b>Auto Scaling</b>, <b>Launch Templates</b>, and an
+<b>Application Load Balancer (ALB)</b>.
+</p>
 
----
+<hr>
 
-## 🧩 Project Overview
+<h2>🧩 Project Overview</h2>
 
-This setup automatically scales EC2 instances based on traffic load.  
-When traffic increases, new instances launch automatically, and when load decreases, unnecessary instances terminate.
+<p>
+This setup automatically scales EC2 instances based on traffic load.
+When traffic increases, new instances launch automatically,
+and when load decreases, unnecessary instances terminate.
+</p>
 
----
+<hr>
 
-## 🛠️ AWS Components Used
+<h2>🛠️ AWS Components Used</h2>
 
-- **Target Group (TG):** Routes traffic to healthy EC2 instances.  
-- **Application Load Balancer (ALB):** Distributes incoming traffic.  
-- **Launch Template:** Defines the EC2 configuration and user data script.  
-- **Auto Scaling Group (ASG):** Automatically adjusts the number of instances.  
-- **Security Group:** Allows HTTP (port 80) inbound traffic.
+<ul>
+  <li><b>Target Group (TG):</b> Routes traffic to healthy EC2 instances</li>
+  <li><b>Application Load Balancer (ALB):</b> Distributes incoming traffic</li>
+  <li><b>Launch Template:</b> Defines EC2 configuration and user data</li>
+  <li><b>Auto Scaling Group (ASG):</b> Automatically adjusts instance count</li>
+  <li><b>Security Group:</b> Allows HTTP (port 80) inbound traffic</li>
+</ul>
 
----
+<hr>
 
-## 🧾 User Data Script
+<h2>🧾 User Data Script</h2>
 
-```bash
-#!/bin/bash
+<pre><code>#!/bin/bash
 yum install httpd -y
 service httpd start
 chkconfig httpd on
-mkdir /var/www/html
-echo 'Welcome ! Website with auto scaling by Parminderjit' > /var/www/html/index.html
+mkdir -p /var/www/html
+echo 'Welcome! Website with Auto Scaling by Parminderjit' &gt; /var/www/html/index.html
+</code></pre>
 
+<hr>
 
+<h2>📸 Project Screenshots</h2>
 
-# Auto-Scaling-on-AWS-Cloud
-perform Auto scaling
+<div class="image-grid">
+  <img width="49%" src="https://github.com/user-attachments/assets/316c77ce-a1f6-47ce-8a45-7b8bfda2f5d7" alt="Auto Scaling setup">
+  <img width="49%" src="https://github.com/user-attachments/assets/e6798868-8308-432f-8971-663a6d30549d" alt="Launch template">
 
-<img width="1233" height="642" alt="image" src="https://github.com/user-attachments/assets/316c77ce-a1f6-47ce-8a45-7b8bfda2f5d7" />
+  <img width="49%" src="https://github.com/user-attachments/assets/cceb1481-d7b3-4c98-a9d7-9e997949ae72" alt="Target group">
+  <img width="49%" src="https://github.com/user-attachments/assets/387ea9aa-c905-4254-98bf-50f3f30fea86" alt="Load balancer">
 
+  <img width="49%" src="https://github.com/user-attachments/assets/cb50d6de-a3a3-49cb-9a35-05793fc56cf1" alt="Scaling activity">
+  <img  width="49%" src="https://github.com/user-attachments/assets/69a46956-bd9e-434d-b2e2-afdb3f615be3" alt="Healthy instances">
+</div>
 
-#!/bin/bash
-yum install httpd -y
-service httpd start
-chkconfig httpd on
-mkdir /var/www/hrml
-echo 'Welcome ! Website with auto scaling by Parminderjit ' > /var/www/html/index.html
+<hr>
 
+<h2>✅ Outcome</h2>
 
-<img width="1081" height="644" alt="image" src="https://github.com/user-attachments/assets/e6798868-8308-432f-8971-663a6d30549d" />
+<ul>
+  <li>EC2 instances scale automatically based on load</li>
+  <li>ALB distributes traffic across instances</li>
+  <li>High availability achieved using ASG</li>
+  <li>Hands-on demonstration of AWS Auto Scaling</li>
+</ul>
 
+<hr>
 
+<h2>👨‍💻 Author</h2>
 
+<p>
+<b>Parminderjit Singh</b><br>
+DevOps Fresher | AWS | Auto Scaling | Cloud Infrastructure
+</p>
 
-<img width="1231" height="656" alt="image" src="https://github.com/user-attachments/assets/cceb1481-d7b3-4c98-a9d7-9e997949ae72" />
+</body>
 
-
-
-
-
-<img width="1260" height="577" alt="image" src="https://github.com/user-attachments/assets/387ea9aa-c905-4254-98bf-50f3f30fea86" />
-
-
-<img width="1229" height="640" alt="image" src="https://github.com/user-attachments/assets/cb50d6de-a3a3-49cb-9a35-05793fc56cf1" />
-
-
-
-<img width="1264" height="593" alt="image" src="https://github.com/user-attachments/assets/69a46956-bd9e-434d-b2e2-afdb3f615be3" />
-
-
-
-
-# AWS Auto Scaling Demo 🚀
-
-This project demonstrates how to deploy a simple web application on AWS using **Auto Scaling**, **Launch Templates**, and an **Application Load Balancer (ALB)**.
-
----
-
-## 🧩 Project Overview
-
-This setup automatically scales EC2 instances based on traffic load.  
-When traffic increases, new instances launch automatically, and when load decreases, unnecessary instances terminate.
-
----
-
-## 🛠️ AWS Components Used
-
-- **Target Group (TG):** Routes traffic to healthy EC2 instances.  
-- **Application Load Balancer (ALB):** Distributes incoming traffic.  
-- **Launch Template:** Defines the EC2 configuration and user data script.  
-- **Auto Scaling Group (ASG):** Automatically adjusts the number of instances.  
-- **Security Group:** Allows HTTP (port 80) inbound traffic.
-
----
-
-## 🧾 User Data Script
-
-```bash
-#!/bin/bash
-yum install httpd -y
-service httpd start
-chkconfig httpd on
-mkdir /var/www/html
-echo 'Welcome ! Website with auto scaling by Parminderjit' > /var/www/html/index.html
+<hr>
+<hr>
 
 
